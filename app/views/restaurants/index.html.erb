@@ -1,0 +1,13 @@
+<h1>Restaurants</h1>
+
+<tbody class="container cl-6">
+  <ul class="list-group list-group-flush">
+  <% @restaurants.each do |restaurant| %>
+  <li class="list-group-item">
+    <%= link_to restaurant.name, restaurant, class: "btn btn-light" %>
+  </li>
+    <% end %>
+  </ul>
+
+<%= link_to "New restaurant",  new_restaurant_path, class: "btn btn-primary"  %>
+</tbody>
